@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 18873
+  controlID: 16
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 18874
+  controlID: 17
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 18875
+  controlID: 18
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -350,23 +350,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1160
-      height: 520
-    m_Scale: {x: 0.4814815, y: 0.4814815}
-    m_Translation: {x: 580, y: 260}
+      height: 541
+    m_Scale: {x: 0.5009259, y: 0.5009259}
+    m_Translation: {x: 580, y: 270.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1204.6154
+      x: -1157.8558
       y: -540
-      width: 2409.2307
+      width: 2315.7117
       height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.4814815
+  m_defaultScale: 0.5009259
   m_LastWindowPixelSize: {x: 1160, y: 541}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 0
@@ -402,9 +402,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e48b0000
-      m_LastClickedID: 35812
-      m_ExpandedIDs: 1649ffff3a49ffff524affff724affff46fbffffdc42000016430000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 46fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.0044988357, y: 0.016499314, z: 0.00007851836, w: 0.9998293}
     speed: 2
-    m_Value: {x: -0.004498946, y: 0.016499719, z: 0.00007852028, w: 0.9998538}
+    m_Value: {x: 0.0044988357, y: -0.016499314, z: -0.00007851836, w: -0.9998293}
   m_Size:
     m_Target: 654.1593
     speed: 2
@@ -609,22 +609,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Scripts
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Programes\Unity\Projects\04_Balls
+  m_LastProjectPath: C:\Users\Usuario\Desktop\MarbleSumoProj\MarbleSumo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 86440000
-    m_LastClickedID: 17542
-    m_ExpandedIDs: 0000000076440000784400007a44000000ca9a3b
+    m_SelectedIDs: 7e440000
+    m_LastClickedID: 17534
+    m_ExpandedIDs: 000000007e440000804400008244000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -652,7 +652,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000076440000784400007a44000000ca9a3b
+    m_ExpandedIDs: 000000007e4400008044000082440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300005c5a00000c380000ca3a0000c45900007249000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
