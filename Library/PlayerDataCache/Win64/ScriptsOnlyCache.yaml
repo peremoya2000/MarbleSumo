@@ -201,6 +201,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -237,8 +239,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3380}
     - Class: 114
       Script: {instanceID: 3476}
-    - Class: 114
-      Script: {instanceID: 3794}
     - Class: 114
       Script: {instanceID: 4146}
     - Class: 114
@@ -526,7 +526,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 9aeb86ac5a4d54d9aaaecbceda6d2566
+      Hash: bd7b4e97804ab37ba01e328460473d5f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuManager

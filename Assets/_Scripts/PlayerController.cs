@@ -21,9 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameManager _gameManager;
     [SerializeField]
-    private GameObject _powerUpIndicator;
-    [SerializeField]
-    private GameObject _multIndicator;
+    private GameObject _powerUpIndicator, _multIndicator;
     [SerializeField]
     private ParticleSystem _particles;
     [SerializeField]

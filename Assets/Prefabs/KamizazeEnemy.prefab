@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxSpeed: 30
-  _volumeMult: 0.95
+  _volumeMult: 1.05
   _pitchOffset: 0
   _pitchShiftAmmount: 0.25
   _pitchBounds: {x: -1, y: 1}
