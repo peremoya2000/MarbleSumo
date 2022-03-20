@@ -24,6 +24,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public void StartGame() {
+        if (string.IsNullOrEmpty(_playfab.myName)) return;
         Time.timeScale = 1;
         _fadeOut = true;
         _fade = 0;

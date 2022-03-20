@@ -9,6 +9,7 @@ using PlayFab.ClientModels;
 
 public class PlayfabManager : MonoBehaviour
 {
+    public string myName { get; private set; }
     [SerializeField]
     private TextMeshProUGUI _positionText;
     [SerializeField]
@@ -17,7 +18,8 @@ public class PlayfabManager : MonoBehaviour
     private GameObject _namePanel;
     [SerializeField]
     private InputField _nameInputText;
-    private string _myId;
+    private string _myId; 
+
 
     void Start(){
         Login(); 
@@ -36,20 +38,22 @@ public class PlayfabManager : MonoBehaviour
     }
     void OnLoginSuccess(LoginResult result) {
         _myId = result.PlayFabId;
-        string name = null;
+        myName = null;
         if(result.InfoResultPayload.PlayerProfile!=null)
-            name = result.InfoResultPayload.PlayerProfile.DisplayName;
+            myName = result.InfoResultPayload.PlayerProfile.DisplayName;
 
-        if (name == null) {
+        if (myName == null) {
             _namePanel.SetActive(true);
         }
         Debug.Log("Loged in!");
     }
 
     public void SubmitPlayerName() {
+        if (string.IsNullOrEmpty(_nameInputText.text)) return;
         var request = new UpdateUserTitleDisplayNameRequest {
             DisplayName = _nameInputText.text
         };
+        myName = _nameInputText.text;
         PlayFabClientAPI.UpdateUserTitleDisplayName(request, OnDisplayNameUpdate, OnError);
     }
     void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result) {
@@ -98,6 +102,7 @@ public class PlayfabManager : MonoBehaviour
 
     //Get and display the leaderboard around player
     public void GetLeaderboard(){
+        if (string.IsNullOrEmpty(myName)) return;
         var request = new GetLeaderboardAroundPlayerRequest{
             StatisticName = "HighScore",
             MaxResultsCount = 7
