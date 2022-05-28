@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 
+
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI waveText;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         StartCoroutine(CheckWave());
+        StartCoroutine(ShowRank());
     }
 
     public IEnumerator CheckWave() {
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour
                 SpawnEnemyWave(++wave);
                 waveText.SetText("Wave: {0}",wave);
             }
-            yield return new WaitForSeconds(2.0f);
+            yield return WaitManager.Wait(2.0f);
         }
     }
     /// <summary>
@@ -76,8 +78,17 @@ public class GameManager : MonoBehaviour
         playfab.SendLeaderboard(wave);
     }
     
-    public void OnDeath() {
-        playfab.GetLeaderboardPosition();
+    public IEnumerator ShowRank() {
+        Time.timeScale = 0f;
+        WaitForSecondsRealtime wait = new WaitForSecondsRealtime(.3f);
+        while (string.IsNullOrEmpty(playfab.myName)) {
+            yield return wait;
+        }
+        yield return new WaitForSecondsRealtime(.5f);
+        Time.timeScale = 1f;
+        GameObject text = playfab.GetLeaderboardPosition().gameObject;
+        yield return WaitManager.Wait(1.5f);
+        text.SetActive(false);
     }
 
 }

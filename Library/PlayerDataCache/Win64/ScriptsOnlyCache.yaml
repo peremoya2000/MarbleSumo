@@ -670,7 +670,7 @@ ScriptsOnlyBuild:
     className: FollowPlayer
   - hash:
       serializedVersion: 2
-      Hash: fc90d68e2ce80f69d9ff909eb5c879be
+      Hash: f3fb4f467495d0c569d683503e8b1128
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayfabManager

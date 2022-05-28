@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         _ogForce = powerUpForce;
         _ogDuration = powerUpDuration;
         _fadeImage = _fadePanel.GetComponent<Image>();
+  
     }
 
     // Update is called once per frame
@@ -107,9 +108,7 @@ public class PlayerController : MonoBehaviour
     //Finish game
     private IEnumerator GameEnd() {
         _gameManager.SendScore();
-        yield return new WaitForSeconds(1.5f);
-        _gameManager.OnDeath();
-        yield return new WaitForSeconds(1.8f);
+        yield return WaitManager.Wait(1.0f);
         _dead = true;
         _fadePanel.gameObject.SetActive(true);
     }
@@ -126,14 +125,14 @@ public class PlayerController : MonoBehaviour
     }
 
     IEnumerator PowerUpCountDown() {
-        yield return new WaitForSeconds(powerUpDuration);
+        yield return WaitManager.Wait(powerUpDuration);
         _powerUpIndicator.SetActive(false);
         _powerUp = false;
         _audioManager.SetImpactVolume(1);
     }
 
     IEnumerator PowerUpMultiplier(){
-        yield return new WaitForSeconds(powerUpDuration);
+        yield return WaitManager.Wait(powerUpDuration);
         powerUpForce = _ogForce;
         powerUpDuration = _ogDuration;
         _multIndicator.SetActive(false);

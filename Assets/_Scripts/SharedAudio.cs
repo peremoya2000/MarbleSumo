@@ -25,7 +25,7 @@ public class SharedAudio : MonoBehaviour
     public IEnumerator ResetCounter(){
         while (true){
             _soundsPlayed = 0;
-            yield return new WaitForSeconds(0.5f);
+            yield return WaitManager.Wait(.5f);
         }
     }
 }

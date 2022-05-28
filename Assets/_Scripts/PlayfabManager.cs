@@ -42,9 +42,9 @@ public class PlayfabManager : MonoBehaviour
         if(result.InfoResultPayload.PlayerProfile!=null)
             myName = result.InfoResultPayload.PlayerProfile.DisplayName;
 
-        if (myName == null) {
+        if (myName == null)
             _namePanel.SetActive(true);
-        }
+
         Debug.Log("Loged in!");
     }
 
@@ -83,12 +83,13 @@ public class PlayfabManager : MonoBehaviour
     }
 
     //Get current player leaderboard position
-    public void GetLeaderboardPosition() {
+    public TextMeshProUGUI GetLeaderboardPosition() {
         var request = new GetLeaderboardAroundPlayerRequest { 
             StatisticName = "HighScore",
             MaxResultsCount = 3
         };
         PlayFabClientAPI.GetLeaderboardAroundPlayer(request, CalculateLeaderboardPosition, OnError);
+        return _positionText;
     }
     void CalculateLeaderboardPosition(GetLeaderboardAroundPlayerResult result){
         foreach (var item in result.Leaderboard) {
